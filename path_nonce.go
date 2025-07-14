@@ -17,6 +17,10 @@ func (b *backend) pathNonce() *framework.Path {
 				Callback: b.pathNonceRead,
 				Summary:  "Generates a new nonce",
 			},
+			logical.UpdateOperation: &framework.PathOperation{
+				Callback: b.pathNonceRead,
+				Summary:  "Generates a new nonce",
+			},
 		},
 	}
 }
